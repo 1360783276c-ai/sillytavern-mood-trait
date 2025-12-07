@@ -193,3 +193,12 @@ function interceptAIPrompt() {
 initFloatWindow();
 interceptAIPrompt();
 console.log('✅ 插件已加载，悬浮窗已创建');
+
+// 强制创建悬浮窗（确保一定会执行）
+setTimeout(() => {
+  // 如果悬浮窗还没创建，手动创建
+  if (!document.querySelector('.mood-trait-float')) {
+    initFloatWindow();
+    console.log('⚠️ 强制创建悬浮窗成功');
+  }
+}, 2000); // 延迟2秒执行，确保页面加载完成
