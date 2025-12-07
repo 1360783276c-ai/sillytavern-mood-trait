@@ -1,0 +1,10 @@
+{
+  "name": "Mood & Trait Selector",
+  "version": "1.0.0",
+  "author": "你的名字",
+  "description": "通过悬浮窗预选NPC的特质和心情",
+  "entry": "script.js",
+  "css": "style.css",
+  "isMod": false,
+  "isChatMod": true
+}
