@@ -189,23 +189,7 @@ function interceptAIPrompt() {
   };
 }
 
-// 插件入口
-(async () => {
-  // 等待SillyTavern初始化
-  await new Promise(resolve => {
-    const checkReady = () => {
-      if (window.chatProcessor) {
-        resolve();
-      } else {
-        setTimeout(checkReady, 100);
-      }
-    };
-    checkReady();
-  });
-
-  // 初始化面板 + 拦截Prompt
-  initFloatWindow();
-  interceptAIPrompt();
-
-  console.log('✅ 特质/心情预选插件已加载（AI生成前可手动选择）');
-})();
+// 简化入口：直接初始化，不等待
+initFloatWindow();
+interceptAIPrompt();
+console.log('✅ 插件已加载，悬浮窗已创建');
